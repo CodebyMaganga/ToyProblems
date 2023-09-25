@@ -1,10 +1,12 @@
 function promptGrade() {
-    let savePrompt = prompt("Enter Student Grade: ");
-
-    if (savePrompt !== null) {
-        savePrompt = parseInt(savePrompt);
+    let savePrompt = prompt("Enter Student Marks: "); //Ask for students MARKS
+   
+    /*Check if user has entered sth */
+    if(!(savePrompt)){
+        return "Please enter marks!"
     }
 
+    /*Award appropiate grade according to rabge in marks */
     if (savePrompt) {
         if (savePrompt >= 0 && savePrompt < 40) {
             return "E";
